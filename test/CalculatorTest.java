@@ -30,6 +30,10 @@ public class CalculatorTest {
             pass("divide(5, 0) throws IllegalArgumentException");
         }
 
+        // Test power
+        check("power(2, 3) == 8", calc.power(2, 3) == 8);
+        check("power(5, 0) == 1", calc.power(5, 0) == 1);
+
         // Summary
         System.out.println("============================");
         System.out.println("Tests passed: " + passed);

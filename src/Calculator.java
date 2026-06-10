@@ -18,11 +18,20 @@ public class Calculator {
         return (double) a / b;
     }
 
+    public int power(int a, int b) {
+        int result = 1;
+        for (int i = 0; i < b; i++) {
+            result *= a;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         System.out.println("10 + 5 = " + calc.add(10, 5));
         System.out.println("10 - 5 = " + calc.subtract(10, 5));
         System.out.println("10 * 5 = " + calc.multiply(10, 5));
         System.out.println("10 / 5 = " + calc.divide(10, 5));
+        System.out.println("2 ^ 3 = " + calc.power(2, 3));
     }
 }
